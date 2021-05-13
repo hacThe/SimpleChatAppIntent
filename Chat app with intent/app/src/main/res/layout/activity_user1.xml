@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="SwitchOnpressUser1"
+    tools:context=".User1">
+
+    <ImageView
+        android:id="@+id/addition"
+        android:layout_width="45dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-5dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="sendPhotoOnClicked"
+        android:paddingVertical="18dp"
+        android:paddingStart="9dp"
+        android:paddingEnd="5dp"
+        android:src="@drawable/ic_baseline_image_24"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="-5dp"
+        android:background="#00090909"
+        android:clickable="true"
+        android:onClick="SendOnpressUser1"
+        android:paddingVertical="9dp"
+        android:src="@drawable/ic_baseline_send_24"
+        android:tint="#3945BA"
+        android:focusable="true"
+        android:contentDescription="@string/todo" />
+
+    <ImageView
+        android:id="@+id/contact"
+        android:layout_width="45dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-5dp"
+        android:layout_toRightOf="@id/addition"
+        android:onClick="ContactOnclick"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="18dp"
+        android:src="@drawable/ic_baseline_contacts_24"
+        android:layout_toEndOf="@id/addition"
+        android:contentDescription="@string/todo" />
+
+
+    <ImageView
+        android:id="@+id/locate"
+        android:layout_width="45dp"
+        android:layout_height="65dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-5dp"
+        android:layout_toRightOf="@id/contact"
+        android:onClick="LocateOnclick"
+        android:paddingHorizontal="5dp"
+        android:paddingVertical="18dp"
+        android:src="@drawable/ic_baseline_location_on_24"
+        android:layout_toEndOf="@id/contact"
+        android:contentDescription="@string/todo" />
+
+
+    <EditText
+        android:id="@+id/EditMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mainActScrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="7dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_toStartOf="@id/send"
+        android:layout_toLeftOf="@id/send"
+        android:layout_toEndOf="@id/locate"
+        android:layout_toRightOf="@id/locate"
+        android:background="@drawable/texthere"
+        android:fontFamily="@font/lato"
+        android:inputType="text"
+        android:onClick="OnclickEditext2"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="10dp"
+        android:textSize="16sp"
+        android:importantForAutofill="no" />
+
+    <ScrollView
+        android:id="@+id/mainActScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="601dp"
+        android:layout_above="@+id/send"
+        android:layout_below="@+id/AppbarLayout"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="-1dp">
+
+        <LinearLayout
+            android:id="@+id/linearlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppbarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="63dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/avatar_user_2"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/ic_baseline_account_circle_24"
+                android:tint="#00FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvMainName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/lato_black"
+                android:text="@string/main_user"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/tvMainSubTile"
+                app:layout_constraintStart_toEndOf="@+id/avatar_user_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.666" />
+
+            <TextView
+                android:id="@+id/tvMainSubTile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/lato"
+                android:text="@string/this_is_who_you_are_chatting_with"
+                android:textColor="#D8D8D8"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/avatar_user_2" />
+
+            <ImageView
+                android:id="@+id/switchFromMain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:onClick="SwitchOnpressUser1"
+                android:src="@drawable/ic_baseline_swap_horizontal_circle_24"
+                android:tint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:focusable="true"
+                android:contentDescription="@string/todo" />
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:onClick="CallOnclick"
+                android:src="@drawable/ic_baseline_call_24"
+                android:tint="#FFFFFF"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/switchFromMain"
+                app:layout_constraintTop_toTopOf="parent"
+                android:contentDescription="@string/todo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">IntentChatApp</string>
+    <string name="todo">TODO</string>
+    <string name="number">Number</string>
+    <string name="name">Name</string>
+    <string name="start">Start</string>
+    <string name="welcome_to_our_nchat_app">Welcome to our \nChat App</string>
+    <string name="this_is_who_you_are_chatting_with">This is who you are chatting with</string>
+    <string name="main_user">Main user</string>
+    <string name="this_is_you_chatting_with_you">This is you chatting with you</string>
+    <string name="master">Master</string>
+</resources>
